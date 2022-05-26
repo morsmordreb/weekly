@@ -49,7 +49,7 @@ draft: false
 
 >“回避游戏创意不足的一条捷径就是参与CPU、画质、音质的竞争，用高性能来弥补游戏本身的不足”——横井军平
 
-说到底，游戏性才是一个游戏最纯粹地去吸引玩家的东西。而扩大人口战略，也注定了任天堂的游戏都是老少咸宜、甚至是低幼的。关于这一点任天堂美国总裁Reggie Fils-Aime在接受《多伦多星报》采访时表示：
+说到底，游戏性才是一个游戏最纯粹地去吸引玩家的东西。而扩大人口战略，也注定了任天堂的游戏都是老少咸宜、甚至是低幼的。关于这一点任天堂美国总裁 Reggie Fils-Aime 在接受《多伦多星报》采访时表示：
 
 >“我们非常高兴我们的竞争对手不关注孩子们和家庭游戏市场，这其实是一个非常重要的市场，因为现在5、6岁的孩子将来他们会长大，当他们十几二十岁时依然会是我们的忠实用户。而当你与你的家人一起玩《星之卡比》《塞尔达传说》或是《超级马里奥赛车》时，更能增进家人间的感情。”
 
@@ -64,10 +64,9 @@ draft: false
 ![](https://airing.ursb.me/image/blog/mp-airing.jpg)
 
 <div id="cusdis_thread"
-  data-host="https://cusdis-production-5e13.up.railway.app"
-  data-app-id="847e0d1f-7b38-486f-a8de-4b93f8dfa555"
+  data-host="https://weekly-cusdis-112rn6ur3-airingursb.vercel.app"
+  data-app-id="0c69b8e2-fd45-4e60-b538-278d08523d0d"
   data-page-id="1"
-  data-page-url="http://ursb.me/weekly/posts/weekly-1/"
-  data-page-title="wj.1"
+  data-page-url="http://weekly.ursb.me/posts/weekly-1/"
+  data-page-title="weekly-1"
 ></div>
-<script async defer src="https://cusdis-production-5e13.up.railway.app/js/cusdis.es.js"></script>

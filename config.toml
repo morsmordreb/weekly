@@ -1,4 +1,4 @@
-baseURL = 'http://ursb.me/weekly/'
+baseURL = 'http://weekly.ursb.me/'
 languageCode = 'en-us'
 title = 'Airing Weekly'
 theme = "yinyang"
@@ -29,6 +29,8 @@ mainSections = ["posts"]
 headTitle = "Airing Weekly"
 # disqus = "joway" # disqus account name
 extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-xxx"></script>'
+Description = 'Log something weekly, want you can be happy.'
+
 [[params.socials]]
 name = "About Me"
 link = "https://me.ursb.me/about.html"
