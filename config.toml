@@ -1,0 +1,40 @@
+baseURL = 'http://ursb.me/weekly/'
+languageCode = 'en-us'
+title = 'Airing Weekly'
+theme = "yinyang"
+DefaultContentLanguage = "cn"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    guessSyntax = true
+    noClasses = true
+    style = "bw"
+    tabWidth = 2
+
+[author]
+  name = "Airing"
+  homepage = "https://me.ursb.me/"
+
+[languages]
+  [languages.cn]
+    contentDir = "content/cn"
+    languageName = "Chinese"
+    weight = 1
+
+[params]
+mainSections = ["posts"]
+headTitle = "Airing Weekly"
+# disqus = "joway" # disqus account name
+extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-xxx"></script>'
+[[params.socials]]
+name = "About Me"
+link = "https://me.ursb.me/about.html"
+[[params.socials]]
+name = "Github"
+link = "https://github.com/airingursb"
+postHeaderContent = ""
+postFooterContent = "<br/><br/><p>Subscribe to：<a target='_blank' href='https://me.ursb.me'>Airing's Blog</a></p>"
+extraCSSFiles = []
