@@ -16,7 +16,7 @@ DefaultContentLanguage = "cn"
 
 [author]
   name = "Airing"
-  homepage = "https://me.ursb.me/"
+  homepage = "https://ursb.me"
 
 [languages]
   [languages.cn]
@@ -28,7 +28,7 @@ DefaultContentLanguage = "cn"
 mainSections = ["posts"]
 headTitle = "Airing Weekly"
 # disqus = "joway" # disqus account name
-extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-xxx"></script>'
+# extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-xxx"></script>'
 Description = 'Log something weekly, want you can be happy.'
 favicon = 'https://airing.ursb.me/image/favicon.ico'
 [[params.socials]]
