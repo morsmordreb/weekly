@@ -30,7 +30,7 @@ headTitle = "Airing Weekly"
 # disqus = "joway" # disqus account name
 extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-xxx"></script>'
 Description = 'Log something weekly, want you can be happy.'
-
+favicon = 'https://airing.ursb.me/image/favicon.ico'
 [[params.socials]]
 name = "About Me"
 link = "https://me.ursb.me/about.html"
