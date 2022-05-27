@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Airing Weekly</title><link>https://weekly.ursb.me/posts/</link><description>Recent content in Posts on Airing Weekly</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 22 May 2022 05:24:47 +0800</lastBuildDate><atom:link href="https://weekly.ursb.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>WJ.3: 花束般的恋爱</title><link>https://weekly.ursb.me/posts/weekly-3/</link><pubDate>Sun, 22 May 2022 05:24:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-3/</guid><description>本期周刊原本准备的内容并非是这个，昨晚临时换了，决定通宵写这篇。这期周刊是迟来的“官宣”，也是“告别书”，以纪念我刚刚逝去的“花期”仅 20.5 天的爱情。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Airing Weekly</title><link>https://weekly.ursb.me/posts/</link><description>Recent content in Posts on Airing Weekly</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 27 May 2022 23:24:47 +0800</lastBuildDate><atom:link href="https://weekly.ursb.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>WJ.4: 个人博客演变史</title><link>https://weekly.ursb.me/posts/weekly-4/</link><pubDate>Fri, 27 May 2022 23:24:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-4/</guid><description>个人博客演变史 熟悉我的朋友都知道我记录的会比说的多，很多人觉得言语比文字更有力量和情感，而我却不这么觉得。情感是真情的投入，和呈现载体无关。这篇周刊，我想谈谈我个人博客的演进记录。
+第一阶段：Wordpress
+2014 年上半年接触编程，之后想搭建个人网站来承载 QQ 空间上的文章，上小学中学时 QQ 空间上写了蛮多东西的。之后淘到了 ursb.me 这个域名，因为那会应该舍友之间经常会对骂“你是 s* 吗?”，结果一搜还真有这个域名。因此，这四个有含义字母组成的域名，对我来说弥足珍贵。
+之后域名提交备案，然后搞了个“虚拟空间”搭建个人网站（对，当时叫虚拟空间，其实就是和别人同租一台服务器，用户只有某个目录的权限），第一版博客用的框架是 Wordpress，花了很多时间折腾了贼多插件，结果半年过去了文章一篇也没写。
+第二阶段： Hexo
+反思了一下不能这么搞，于是 2015 年由繁入简，改用 Hexo + GitHub Pages 去部署博客，那段时间基本上周更写了蛮多内容的。但折腾劲一点儿也没有消退，还是搞了很多网站分析和评论的插件，这个静态网页的秒开想必也好不到哪去。折腾了这么多，结果一看站点分析，其实根本没有人评论也没有人阅读，pv 少的可怜，那点 pv 还基本都是我自己点的。饶是如此，我还是坚持在更新，没有有人也没关系，重点在于记录。
+2014-2016 的具体经历可以看 从 WordPress 到 Hexo：ursb.me——个人博客折腾笔记 （PS. 这篇文章已经 out 了，2017 年又改了技术方案）
+第三阶段： Typecho
+直到 2017 年，我一直用的评论插件 “多说” 停止服务了，之后转用难用的网易云评论，结果没两个月也停止服务了。如果用国外的服务，又会影响读者的评论。之后思来想去，找个了轻量级的动态框架 typecho 来搭建新博客——也就是现在的 Airing 的小屋。
+老博客近百篇文章没有迁移到新博客，仅存留本地了。新博客目标是不再灌水，记录之上输出自己的思考，所以更新频率很慢，基本上 1-2 个月才有更新，上班之后更新的就更慢了，毕竟平时工作写的技术方案也不可能发表到博客上。
+新博客技术文的评论区冷冷清清，但是 pv 其实和非技术文是差不多的、甚至更高，可能开发者都喜欢白嫖吧。有时候搜 Flutter 的问题，结果发现搜索结果中的第一篇文章就是自己写的，那种成就感还是挺满的。
+第四阶段： Typecho + Hugo
+但其实非技术文并不要求那么高的严谨性，如果控制发文的质量反而会减少产出，减少记录的频率，迷失记录本身的目的。因此前段时间开始启动周刊项目（具体可见 WJ.1: 开刊，为什么写周刊），也希望自己能用输出倒逼输入。因此用 Hugo 简单弄了个静态网页才存下周刊的文件，同时同步发下公众号：
+前两天重构下的个人首页 Hi, folks | Airing，它同时指向了我新搭建的 Airing Weekly 和 Airing 的小屋。</description></item><item><title>WJ.3: 花束般的恋爱</title><link>https://weekly.ursb.me/posts/weekly-3/</link><pubDate>Sun, 22 May 2022 05:24:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-3/</guid><description>本期周刊原本准备的内容并非是这个，昨晚临时换了，决定通宵写这篇。这期周刊是迟来的“官宣”，也是“告别书”，以纪念我刚刚逝去的“花期”仅 20.5 天的爱情。
 虽然认识的时间不长，在一起的时间也很短暂（5.1-5.21），但是很感谢你给予我的一切，这是我经历过的最甜美的感情，满足了我这些年来对爱情一切的幻想。此外，也很想对你补充句对不起，我没有呵护好这段情感让它夭折了，你决绝而又体面地转身离开，让它永远地停留在了最美的日子里。谢谢你。
 这期周刊是迟来的《花束般的恋爱》的观后感，这是我们唯一一场，在电影院里看过的电影。你当时偏要看这部，我却说结局是 BE 不想看。但无论是当时看完、还是此时此刻，《花束般的恋爱》向我展示的那个爱情最甜美的模样，一直一直埋在我心底，成为我的憧憬。之所以一直没写这篇观后感，也是不好意思以文字的形式去表达爱意，也从来没有写过文章去讨论过情感。
 而事已至此，往事已矣。今天假借周刊补上“官宣”，同时结合《花束般的恋爱》来谈谈我对爱情的理解。
