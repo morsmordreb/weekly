@@ -43,7 +43,7 @@ draft: false
 ![ursb.me](https://airing.ursb.me/image/blog/20220527231137.png)
 
 
-在搭建 Airing Weekly 的时候使用了 Hugo 和一些 PasS，工作日晚上忘记了时间折腾到一点多，折腾的时候才发现原来 Web 前端 还是这么有意思。回想起来，这份折腾的初心也恰我当年决定选这个岗位就业的原因呀！
+在搭建 Airing Weekly 的时候使用了 Hugo 和一些 PaaS，工作日晚上忘记了时间折腾到一点多，折腾的时候才发现原来 Web 前端 还是这么有意思。回想起来，这份折腾的初心也恰我当年决定选这个岗位就业的原因呀！
 
 
 ## 每周推荐
@@ -78,7 +78,7 @@ draft: false
 
 ### 纪实：《桶川跟踪狂杀人事件》
 
-看之前未曾想到纪实文可以写的比电影还惊心动魄、剧情比小说还跌宕起伏，而恰恰是纪实文，对被害人的遭遇才更有共情、对现实的无奈更感愤懑；而正因为是纪实，我才更加钦佩于作者这样的记者，胸怀正义的投入事业，在黑暗的现实里永远追逐光芒。
+看之前未曾想到纪实文可以写的比电影还惊心动魄、剧情比小说还跌宕起伏，而恰恰是纪实文，对被害人的遭遇才更有共情、对现实的无奈更感愤懑；而正因为是纪实，我才更加钦佩于作者这样的记者，胸怀正义地投入事业，在黑暗的现实里永远追逐光芒。
 
 ### 番剧：《间谍过家家》
 
@@ -92,7 +92,7 @@ draft: false
 
 1970 年代的先行者思想的三个要点：
 
-1. 放大想像力（Amplify Imagination） ——Alan Kay 
+1. 放大想象力（Amplify Imagination） ——Alan Kay 
 2. 增强智力（Augment Intellect）——Douglas Engelbart 
 3. 让思想不限于载体（Expand our Thoughts far beyond text on paper） ——Ted Nelson
 
@@ -105,10 +105,10 @@ draft: false
 3. 想象力
 
 
-<div id="cusdis_thread"
+<!-- <div id="cusdis_thread"
   data-host="https://weekly-cusdis-112rn6ur3-airingursb.vercel.app"
   data-app-id="0c69b8e2-fd45-4e60-b538-278d08523d0d"
   data-page-id="3"
   data-page-url="http://weekly.ursb.me/posts/weekly-3/"
   data-page-title="weekly-3"
-></div>
+></div> -->
