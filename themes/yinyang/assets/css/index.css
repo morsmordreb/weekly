@@ -63,6 +63,7 @@ a:hover {
   font-size: 100%;
   background-color: inherit;
   border: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
 }
 
 /* i18n */
