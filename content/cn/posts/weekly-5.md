@@ -77,7 +77,7 @@ draft: false
 ### Recent Code (6.1-6.2)
 
 ```
-TypeScript-React   11 hrs 3 mins  ██████████████▌░░░░░░  69.5%
+TypeScript React   11 hrs 3 mins  ██████████████▌░░░░░░  69.5%
 TypeScript         4 hrs 45 mins  ██████▎░░░░░░░░░░░░░░  30.0%
 Objective-C        3 mins         ░░░░░░░░░░░░░░░░░░░░░   0.3%
 Bash               0 secs         ░░░░░░░░░░░░░░░░░░░░░   0.1%
