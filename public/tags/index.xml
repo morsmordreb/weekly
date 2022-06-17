@@ -5,6 +5,7 @@
     <link>https://weekly.ursb.me/tags/</link>
     <description>Recent content in Tags on Airing Weekly</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://weekly.ursb.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>本文由 Airing 创作，采用 知识共享署名4.0 国际许可协议进行许可</copyright><atom:link href="https://weekly.ursb.me/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

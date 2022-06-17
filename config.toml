@@ -32,12 +32,13 @@ headTitle = "Airing Weekly"
 # extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-xxx"></script>'
 Description = 'Log something weekly, want you can be happy.'
 favicon = 'https://airing.ursb.me/image/favicon.ico'
+postHeaderContent = ""
+postFooterContent = "<br/><br/><p>Subscribe <a target='_blank' href='https://weekly.ursb.me/index.xml'>Airing's Weekly</a></p><p>© 粤ICP备16057808号</p>"
+extraCSSFiles = []
+
 [[params.socials]]
 name = "About Me"
 link = "https://me.ursb.me/about.html"
 [[params.socials]]
 name = "Github"
 link = "https://github.com/airingursb"
-postHeaderContent = ""
-postFooterContent = "<br/><br/><p>Subscribe to：<a target='_blank' href='https://me.ursb.me'>Airing's Blog</a></p>"
-extraCSSFiles = []
