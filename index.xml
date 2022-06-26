@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Airing Weekly</title><link>https://weekly.ursb.me/</link><description>Recent content on Airing Weekly</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>本文由 Airing 创作，采用 知识共享署名4.0 国际许可协议进行许可</copyright><lastBuildDate>Sun, 19 Jun 2022 12:27:47 +0800</lastBuildDate><atom:link href="https://weekly.ursb.me/index.xml" rel="self" type="application/rss+xml"/><item><title>WJ.7: 即兴发言模型</title><link>https://weekly.ursb.me/posts/weekly-7/</link><pubDate>Sun, 19 Jun 2022 12:27:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-7/</guid><description>即兴发言模型 这周刷 B 站看到了一个视频，Up 主介绍了一些发言模版，本文归纳总结一下。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Airing Weekly</title><link>https://weekly.ursb.me/</link><description>Recent content on Airing Weekly</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>本文由 Airing 创作，采用 知识共享署名4.0 国际许可协议进行许可</copyright><lastBuildDate>Sun, 26 Jun 2022 12:27:47 +0800</lastBuildDate><atom:link href="https://weekly.ursb.me/index.xml" rel="self" type="application/rss+xml"/><item><title>WJ.8: 三幕剧与英雄旅程</title><link>https://weekly.ursb.me/posts/weekly-8/</link><pubDate>Sun, 26 Jun 2022 12:27:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-8/</guid><description>三幕剧与英雄旅程 说三幕剧之前，我们先谈谈如何分析一个故事的组成，以前语文课程学过，总结下有两种方式：
+要素拆解法 叙事过程拆解法 所谓要素拆解法，就是分析「人事时地因」（5W），如果要辅以叙事方法的分析可以再加上「如何叙事」 这个要素，以组成 5W1H：
+人物(Who) 事件(What) 时间(When) 地点(Where) 为何发生(Why)：故事发生的背景原因 如何叙事(How) 而所谓叙事过程拆解法，常见的是「起承转合」：
+起：故事的起始，如何开始，事件的触发等等。 承：故事的延展，剧情的铺陈与持续。 转：故事的高潮，转变的剧情，预料之外的发展。 合：故事的结局。 「起承转合」这种讲故事的方法与亚里士多德阐释的“故事基本要素”（即开端、中段和结尾）一脉相承。而三幕剧结构亦是如此。
+经典的三幕式结构又叫戏剧性结构、冲突性结构，将故事分为三个部分：
+开始（Setup）：又称触发或启程，是三幕剧的第一个部分。是故事的开始和原点， 通常用着将观众带入故事的作用，用来解释故事的设定和背景，以便接下来冲突发展。 对抗（Confrontation）：又称冲突或转折，是三幕剧的第二个部分。是故事中角色面临难关，或是重大打击的时刻，第二幕有着将 角色心境推到低谷 以及 强化戏剧张力 的作用。 解决（Resolution）：又称结尾，是故事的终结，是三幕剧的最后一部分。通常会处理第二幕发生的冲突，无论是克服难关， 或是跨过自身的障碍门槛。第三幕需要做到 拉抬角色心境、 故事高潮 以及 收尾 的作用。 上图取自维基百科的三幕剧时间轴图，将每幕（Act）链接起来的就是情节节点（Plot），而三个幕的代表点位分别是触发事件（Inciting incident），中点（Midpoint）和高潮（Climax）。
+值得一提的是，在写故事的时候，一个故事不一定只能有一个三幕剧结构，在叙事过程中，将数个三幕剧剧情混在一起，如：
+触发 → 冲突 → 解决 → 触发 → 冲突 → 解决 → …… 举个例子，《僵尸世界大战》就是这样一部剧，全程无尿点的原因之一就是故事节奏紧凑，由数个三幕剧的副本构成的电影。所以在 B 站看的时候，特别有在玩《求生之路》的既视感，弹幕也特别沉浸（“任务完成”，“第一章结束”）：
+观察这部剧的弹幕热度条会发现一个有意思的现象：
+图中每个章节是我自己起的，根据剧情大概可以分成 6个三幕剧，其中每一章中恰会有一个弹幕峰值，这个峰值对应的恰是这一幕故事的高潮情节：
+点 1：第一幕的高潮，大街上爆发丧尸 点 2：第二幕的高潮，主角团黎明前夕在大楼中逃生 点 3：第三幕的高潮，主角团在朝鲜机场爆发枪战 点 4：第四幕的高潮，主角团在以色列遭遇丧尸群突破救世之墙 点 5：第五幕的高潮 点 6：第六幕的高潮，不是特别明显， 除了三幕剧本身可以叠加，为了突出剧情的连贯性，有时也可将三结构改为五结构：
+触发→ 冲突 → 解决冲突 → 冲突 → 解决冲突 英雄旅程（Hero’s Journey）是好莱坞编剧提出的「英雄旅程的 12 个阶段」，其是基于神话与常见剧本所整理出的一套英雄主角成长路线的模版：</description></item><item><title>WJ.7: 即兴发言模型</title><link>https://weekly.ursb.me/posts/weekly-7/</link><pubDate>Sun, 19 Jun 2022 12:27:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-7/</guid><description>即兴发言模型 这周刷 B 站看到了一个视频，Up 主介绍了一些发言模版，本文归纳总结一下。
 Yes And 原则 金字塔法则 FFC 赞美法则 FFA 汇报法则 NVC 技巧 Yes And 原则 适用场景：表达相左观点
 核心思想：不要否定别人，以肯定代替否定
 “Yes! And…” 技巧源于意大利的即兴喜剧， Yes 代表同意对方说的话，And 是在 Yes 的基础上添加自己的观点。因为即兴表演是没有剧本的，因此想要顺利推进情节就需要承接对方的话，然后再添加自己的内容，这样整体的节奏会更加连贯。若是相互否定，就相当于砍掉了观众前文接受的内容，拼凑的情节无法高效连接。
