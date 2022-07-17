@@ -37,6 +37,9 @@ postFooterContent = "<br/><br/><p>Subscribe <a target='_blank' href='https://wee
 extraCSSFiles = []
 
 [[params.socials]]
+name = "RSS"
+link = "https://weekly.ursb.me/index.xml"
+[[params.socials]]
 name = "About Me"
 link = "https://me.ursb.me/about.html"
 [[params.socials]]
