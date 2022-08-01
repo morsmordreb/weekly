@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Airing Weekly</title><link>https://weekly.ursb.me/</link><description>Recent content on Airing Weekly</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>本文由 Airing 创作，采用 知识共享署名4.0 国际许可协议进行许可</copyright><lastBuildDate>Sun, 31 Jul 2022 11:57:47 +0800</lastBuildDate><atom:link href="https://weekly.ursb.me/index.xml" rel="self" type="application/rss+xml"/><item><title>WJ.13: 玄学杠杆与异世界小组</title><link>https://weekly.ursb.me/posts/weekly-13/</link><pubDate>Sun, 31 Jul 2022 11:57:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-13/</guid><description>玄学杠杆与异世界小组 周末听到一期播客，说的是年轻人的网络占卜：EP03 网络占卜「奇观」：00 后给 70 后指点人生 - 跳进兔子洞。
-网络占卜变成了年轻人的职业选择，大多数人会说一切的开始来源于一颗纯碎的好奇心。低门槛、零成本、高回报。大部分占卜师的第一步都是自学，基本上去 B 站或者基本书看个两三天就会了。小红书上接单的普遍是自学了几个月的 00 后，想要从零基础把塔罗发展成副业甚至是全职并不难，而且比较有前景。现在的年轻人社恐的略多，可能这种足不出户、不用面对面的要求会比较符合目前的市场环境。
+网络占卜变成了年轻人的职业选择，大多数人会说一切的开始来源于一颗纯粹的好奇心。低门槛、零成本、高回报。大部分占卜师的第一步都是自学，基本上去 B 站或者几本书看个两三天就会了。小红书上接单的普遍是自学了几个月的 00 后，想要从零基础把塔罗发展成副业甚至是全职并不难，而且比较有前景。现在的年轻人社恐的略多，可能这种足不出户、不用面对面的要求会比较符合目前的市场环境。
 但是这期播客节目深入研究之后，发现其实客户分布在 25 岁到 55 岁之间的，年轻的客户群占卜的话题总是离不开「爱情」，40 多岁的群体则会关注家庭和孩子问题。但是这些群体有个共同特种，很多时候，客户想要的是一种纯粹的情感交流和倾诉。而占卜师，更像是一个树洞。
 因为她们基本上是没有办法排解的。有的时候又不能跟父母说，也不能跟朋友说，也没有自己的资源和资金去寻求真正专业的、长期的心理帮助。这个时候可能就占卜师可以起到一个比较微小的治愈作用。 ——《网络占卜「奇观」》
 听完这期节目，我还想到之前看到的袤则咨询的 2022大社交趋势观察报告，里面提到了一个趋势「玄学杠杆」。
@@ -21,8 +21,8 @@
 想到《娱乐至死》中尼尔·波兹曼的「媒介即隐喻」理论：媒介的选择会反过来改变我们自己，我们选择什么样的媒介，就通往什么样的结局。
 我们不知道该如何认识自我，那么就创造玄学的镜子与异世界的光景，通过投射与自己互动。以此补足自我认知，丰满个体意义。
 珍惜当下的日常，向内看、向后看，也是为了更好地向外看、向前看。不管怎样，多读书、多思考永远是正途。
-每周推荐 技术文：How Blink works 这周在看 Blink 的代码，从网上找到一篇很不错的文章：How Blink works，这是一篇 Chromium 的官方团队出品的文章，它介绍了 Chrome 浏览器内核内部的两个重要模块 Blink 内部设计和实现的一些细节。对于想要了解 Chrome 内核内部实现的同学，这篇文章提供了不错的入门指引。
-本周记录 Recent Viewings 读完：科幻 |《记忆旅行者》| ★★★★☆ 看过：电影 |《未麻的部屋》| ★★★★★ 看过：电影 |《爱在日落黄昏时》| ★★★★☆ 看过：电影 |《红辣椒》| ★★★★★ 玩过：治愈 |《Dorfromantik》| ★★★★☆ Recent Code TypeScript 21 hrs 1 min █████████▋░░░░░░░░░░░ 45.</description></item><item><title>WJ.12: 前端三大浪漫</title><link>https://weekly.ursb.me/posts/weekly-12/</link><pubDate>Sun, 24 Jul 2022 11:57:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-12/</guid><description>前端开发中的大小写敏感问题 由于前段时间被催更了技术文，于是这周末写了一篇技术文章 前端开发中的大小写敏感问题 - Airing 的小屋，因此本期周刊主体部分便不再撰写。
+每周推荐 技术文：How Blink works 这周在看 Blink 的代码，从网上找到一篇很不错的文章：How Blink works，这是一篇 Chromium 官方团队出品的文章，它介绍了 Chrome 浏览器内核内部的重要模块 Blink 内部设计和实现的一些细节。对于想要了解 Chrome 内核内部实现的同学，这篇文章提供了不错的入门指引。
+本周记录 Recent Viewings 读完：科幻 |《记忆旅行者》| ★★★★☆ 看过：电影 |《未麻的部屋》| ★★★★★ 看过：电影 |《爱在日落黄昏时》| ★★★★☆ 看过：电影 |《红辣椒》| ★★★★★ 玩过：治愈 |《Dorfromantik》| ★★★★☆ 很喜欢 Dorfromantik 这种治愈画风的游戏呀~​</description></item><item><title>WJ.12: 前端三大浪漫</title><link>https://weekly.ursb.me/posts/weekly-12/</link><pubDate>Sun, 24 Jul 2022 11:57:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-12/</guid><description>前端开发中的大小写敏感问题 由于前段时间被催更了技术文，于是这周末写了一篇技术文章 前端开发中的大小写敏感问题 - Airing 的小屋，因此本期周刊主体部分便不再撰写。
 有兴趣的同学可以直接阅读原文： 前端开发中的大小写敏感问题 - Airing 的小屋。
 每周推荐 前端三大浪漫 看到一篇文章介绍了 脉脉上的 &amp;ldquo;前端三大浪漫&amp;rdquo; 是个啥？，三大浪漫分别是：
 富文本编辑器 在线 excel CRDT - 无冲突复制数据类型 路径依赖 朋友上周给我推荐了这篇文章，写的蛮好的：我们当下的媒介使用习惯，是否在很久以前就养成了？。
