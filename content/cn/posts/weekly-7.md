@@ -1,6 +1,7 @@
 ---
 title: "WJ.7: 即兴发言模型"
 date: 2022-06-19T12:27:47+08:00
+categories: ['随笔']
 draft: false
 ---
 

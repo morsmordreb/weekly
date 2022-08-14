@@ -1,6 +1,7 @@
 ---
 title: "WJ.4: 个人博客演变史"
 date: 2022-05-27T23:24:47+08:00
+categories: ['随笔']
 draft: false
 ---
 

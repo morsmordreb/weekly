@@ -1,6 +1,7 @@
 ---
 title: "WJ.9: 高效率到高消耗的现象与反思"
 date: 2022-07-03T15:28:47+08:00
+categories: ['随笔']
 draft: false
 ---
 

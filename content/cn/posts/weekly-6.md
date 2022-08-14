@@ -1,6 +1,7 @@
 ---
 title: "WJ.6: 沟通艺术中的知觉检核"
 date: 2022-06-11T17:30:17+08:00
+categories: ['随笔']
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "WJ.2: 重拾失去的好奇心"
 date: 2022-05-14T19:01:47+08:00
+categories: ['随笔']
 draft: false
 ---
 

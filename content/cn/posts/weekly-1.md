@@ -1,6 +1,7 @@
 ---
 title: "WJ.1: 开刊，为什么写周刊"
 date: 2022-05-07T19:01:47+08:00
+categories: ['随笔']
 draft: false
 ---
 

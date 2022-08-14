@@ -1,6 +1,7 @@
 ---
 title: "WJ.10: 那些我喜欢的游戏（第1辑）"
 date: 2022-07-10T12:12:47+08:00
+categories: ['随笔']
 draft: false
 ---
 

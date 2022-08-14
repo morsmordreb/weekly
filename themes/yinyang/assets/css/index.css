@@ -46,7 +46,7 @@ a:hover {
 .markdown-body pre {
   padding: 16px;
   overflow: auto;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .markdown-body code {
@@ -60,10 +60,9 @@ a:hover {
 
 .markdown-body pre > code {
   padding: 0;
-  font-size: 100%;
   background-color: inherit;
   border: 0;
-  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font: normal 14.4px/24px "IBM Plex Mono", Menlo, Consolas, monospace;
 }
 
 /* i18n */
@@ -129,10 +128,10 @@ a:hover {
 }
 
 .posts-category {
-  padding: 3px 0;
+  /* padding: 3px 0;
   border: #000 2px solid;
-  border-radius: 5px;
-  /* margin-bottom: 3px; */
+  border-radius: 5px; */
+  margin-bottom: 3px;
 }
 
 .site-footer {
@@ -280,4 +279,159 @@ a:hover {
   .posts-category {
     display: none;
   }
+}
+
+.admonition {
+  margin: 0 -20px;
+  padding: 5px 20px;
+}
+.admonition .admonition-title {
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-right: 5px;
+  float: left;
+}
+
+.admonition.warning {
+  background: #FBE9E7;
+  color: #a30000;
+  margin: 0 -20px;
+  padding: 5px 20px;
+}
+
+.admonition.sourcecode {
+  background: rgba(38, 139, 210, 0.1);
+}
+
+.admonition.tryit {
+  background: #b9f6ca;
+}
+.admonition.tryit .codehilite {
+  background-color: transparent;
+  color: inherit;
+  margin: 0px 0px;
+}
+.admonition.tryit .codehilite .c {
+  color: grey;
+}
+
+.content {
+  padding-top: 20px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.box-centered {
+  text-align: center;
+}
+
+.box-white {
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 8px #aaa;
+  border-radius: 5px;
+}
+
+.aside {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 240px;
+  text-align: left;
+  font-size: 0.8em;
+  margin-right: -280px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .box {
+    width: auto;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+  }
+
+  .box-white {
+    border: none;
+  }
+
+  .content {
+    width: auto;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+  }
+
+  .aside {
+    margin-right: 0px;
+    position: relative;
+    right: 0px;
+    width: auto;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    background-color: rgba(128, 128, 128, 0.1);
+    display: block;
+    padding: 5px;
+  }
+
+  body {
+    padding: 5px;
+  }
+
+  div.codehilite {
+    font: normal 10px/13px "IBM Plex Mono", Menlo, Consolas, monospace;
+    margin: 0px -5px;
+    padding: 5px 5px;
+  }
+}
+
+code {
+  font: normal 14.4px/24px "IBM Plex Mono", Menlo, Consolas, monospace;
+  white-space: pre;
+}
+
+.aside code {
+  font: normal 12.96px/21.6px "IBM Plex Mono", Menlo, Consolas, monospace !important;
+}
+
+pre {
+  font: normal 16px/24px "IBM Plex Mono", Menlo, Consolas, monospace;
+}
+
+div.epigraph blockquote {
+  margin-right: 0px;
+  float: right;
+  font-style: italic;
+}
+div.epigraph blockquote .footer {
+  font-style: normal;
+  text-align: right;
+}
+
+figure {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure img {
+  margin-left: auto;
+}
+
+figcaption {
+  font-size: 0.87em;
+  color: #3c40439c;
+  text-align: center;
+}
+
+figcaption a {
+  color: #3c40439c;
 }

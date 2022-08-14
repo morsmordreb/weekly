@@ -1,6 +1,7 @@
 ---
 title: "WJ.13: 玄学杠杆与异世界小组"
 date: 2022-07-31T11:57:47+08:00
+categories: ['随笔']
 draft: false
 ---
 

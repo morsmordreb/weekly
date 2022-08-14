@@ -1,6 +1,7 @@
 ---
 title: "WJ.12: 前端三大浪漫"
 date: 2022-07-24T11:57:47+08:00
+categories: ['随笔']
 draft: false
 ---
 

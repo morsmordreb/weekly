@@ -1,6 +1,7 @@
 ---
 title: "WJ.5: 我在 TME 工作的一天"
 date: 2022-06-04T12:05:47+08:00
+categories: ['随笔']
 draft: false
 ---
 

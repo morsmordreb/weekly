@@ -10,10 +10,19 @@ copyright = '本文由 Airing 创作，采用 知识共享署名4.0 国际许可
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    guessSyntax = true
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
     noClasses = true
-    style = "bw"
-    tabWidth = 2
+    noHl = false
+    style = 'xcode'
+    tabWidth = 4
 
 [author]
   name = "Airing"

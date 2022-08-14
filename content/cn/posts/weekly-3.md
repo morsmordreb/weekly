@@ -1,6 +1,7 @@
 ---
 title: "WJ.3: 花束般的恋爱"
 date: 2022-05-22T05:24:47+08:00
+categories: ['随笔']
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "WJ.11: 筮法是如何进行的"
 date: 2022-07-17T12:11:47+08:00
+categories: ['随笔']
 draft: false
 ---
 

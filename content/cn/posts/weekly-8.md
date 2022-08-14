@@ -1,6 +1,7 @@
 ---
 title: "WJ.8: 三幕剧与英雄旅程"
 date: 2022-06-26T12:27:47+08:00
+categories: ['随笔']
 draft: false
 ---
 
