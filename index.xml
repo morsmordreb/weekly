@@ -4,7 +4,7 @@ Purpose of this document
 本文档系个人研究 Blink 渲染管线的笔记记录，本文将介绍 Blink 的一些基础知识与渲染管线的主要流程。
 Introduce to Blink Blink 是 Web 的渲染引擎，Chromium 和 Android Webview 都是用 Blink 作为渲染引擎。
 Blink Public API Figure: Blink in Web platform 你可以阅读 How Blink works 获取更多关于 Blink 的知识。 Blink 包括以下特性：
-实现了 Web 平台的规范（也就是 HTML 标准），包括 DOM，CSS 和 [[Web IDL]]； 内嵌 V8 运行 JavaScript； 通过底层的网络栈请求资源； 构建 DOM 树； 计算样式和排版； 内嵌 Chrome Compositor 用于绘图； Source to read</description></item><item><title>WJ.13: 玄学杠杆与异世界小组</title><link>https://weekly.ursb.me/posts/weekly-13/</link><pubDate>Sun, 31 Jul 2022 11:57:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-13/</guid><description>玄学杠杆与异世界小组 周末听到一期播客，说的是年轻人的网络占卜：EP03 网络占卜「奇观」：00 后给 70 后指点人生 - 跳进兔子洞。
+实现了 Web 平台的规范（也就是 HTML 标准），包括 DOM，CSS 和 WebIDL； 内嵌 V8 运行 JavaScript； 通过底层的网络栈请求资源； 构建 DOM 树； 计算样式和排版； 内嵌 Chrome Compositor 用于绘图； Source to read</description></item><item><title>WJ.13: 玄学杠杆与异世界小组</title><link>https://weekly.ursb.me/posts/weekly-13/</link><pubDate>Sun, 31 Jul 2022 11:57:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-13/</guid><description>玄学杠杆与异世界小组 周末听到一期播客，说的是年轻人的网络占卜：EP03 网络占卜「奇观」：00 后给 70 后指点人生 - 跳进兔子洞。
 网络占卜变成了年轻人的职业选择，大多数人会说一切的开始来源于一颗纯粹的好奇心。低门槛、零成本、高回报。大部分占卜师的第一步都是自学，基本上去 B 站或者几本书看个两三天就会了。小红书上接单的普遍是自学了几个月的 00 后，想要从零基础把塔罗发展成副业甚至是全职并不难，而且比较有前景。现在的年轻人社恐的略多，可能这种足不出户、不用面对面的要求会比较符合目前的市场环境。
 但是这期播客节目深入研究之后，发现其实客户分布在 25 岁到 55 岁之间的，年轻的客户群占卜的话题总是离不开「爱情」，40 多岁的群体则会关注家庭和孩子问题。但是这些群体有个共同特种，很多时候，客户想要的是一种纯粹的情感交流和倾诉。而占卜师，更像是一个树洞。
 因为她们基本上是没有办法排解的。有的时候又不能跟父母说，也不能跟朋友说，也没有自己的资源和资金去寻求真正专业的、长期的心理帮助。这个时候可能就占卜师可以起到一个比较微小的治愈作用。 ——《网络占卜「奇观」》

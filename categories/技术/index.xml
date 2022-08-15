@@ -4,4 +4,4 @@ Purpose of this document
 本文档系个人研究 Blink 渲染管线的笔记记录，本文将介绍 Blink 的一些基础知识与渲染管线的主要流程。
 Introduce to Blink Blink 是 Web 的渲染引擎，Chromium 和 Android Webview 都是用 Blink 作为渲染引擎。
 Blink Public API Figure: Blink in Web platform 你可以阅读 How Blink works 获取更多关于 Blink 的知识。 Blink 包括以下特性：
-实现了 Web 平台的规范（也就是 HTML 标准），包括 DOM，CSS 和 [[Web IDL]]； 内嵌 V8 运行 JavaScript； 通过底层的网络栈请求资源； 构建 DOM 树； 计算样式和排版； 内嵌 Chrome Compositor 用于绘图； Source to read</description></item></channel></rss>
+实现了 Web 平台的规范（也就是 HTML 标准），包括 DOM，CSS 和 WebIDL； 内嵌 V8 运行 JavaScript； 通过底层的网络栈请求资源； 构建 DOM 树； 计算样式和排版； 内嵌 Chrome Compositor 用于绘图； Source to read</description></item></channel></rss>
