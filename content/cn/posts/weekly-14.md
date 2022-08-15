@@ -29,7 +29,7 @@ Blink 是 Web 的渲染引擎，Chromium 和 Android Webview 都是用 Blink 作
 
 Blink 包括以下特性：
 
-- 实现了 Web 平台的规范（也就是 [HTML 标准](https://html.spec.whatwg.org/multipage/?)），包括 DOM，CSS 和 [[Web IDL]]；  
+- 实现了 Web 平台的规范（也就是 [HTML 标准](https://html.spec.whatwg.org/multipage/?)），包括 DOM，CSS 和 WebIDL；  
 - 内嵌 V8 运行 JavaScript；  
 - 通过底层的网络栈请求资源；  
 - 构建 DOM 树；  
@@ -64,7 +64,7 @@ Blink 包括以下特性：
 ### Renderer processes
 
 {{% aside %}}
-过去进程间通信使用 [Chromium IPC](https://www.chromium.org/developers/design-documents/inter-process-communication)，现在还有很多代码仍旧在使用 IPC。
+过去进程间通信使用 [Chromium IPC](https://www.chromium.org/developers/design-documents/inter-process-communication)，现在还有很多代码仍旧在使用 [IPC](https://chromium.googlesource.com/chromium/+/refs/heads/trunk/ipc/)。
 {{% /aside %}}
 
 Chromium 拥有一个 browser processes 和 N 个沙盒 renderer processes，其中 Blink 运行在 renderer processes。browser 与 renderer 进程间通讯是由 [Mojo](https://chromium.googlesource.com/chromium/src/+/master/mojo/README.md)来实现的。
@@ -72,7 +72,6 @@ Chromium 拥有一个 browser processes 和 N 个沙盒 renderer processes，其
 Blink renderer processes 模型如下图所示：
 
 {{<figure src="https://airing.ursb.me/image%2Fblog%2FuIqf0QQZxF6mHPDWFEjz.png" attr="Renderer processes" attrlink="https://developer.chrome.com/blog/inside-browser-part3/">}}
-
 
 {{% aside %}}
 Renderer process with a main thread, worker threads, a compositor thread, and a raster thread inside.
