@@ -81,7 +81,7 @@ Renderer process 拥有一个 main thread, 多个 worker threads, 一个 composi
 
 而 Blink 几乎所有的主要活动都发生在 main thread，如 JavaScript 调用，DOM 解析、CSS 样式和排版计算，因此 Blink 的架构被认为主要是单线程的。
 
-## Renderer Pipeline
+## Rendering Pipeline
 
 ### Goals
 
