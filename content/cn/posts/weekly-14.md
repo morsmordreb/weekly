@@ -1,5 +1,5 @@
 ---
-title: "WJ.14: Blink Renderer Pipeline - Introduce"
+title: "WJ.14: Blink Rendering Pipeline - Introduce"
 date: 2022-08-14T13:37:47+08:00
 categories: ['技术']
 draft: false
