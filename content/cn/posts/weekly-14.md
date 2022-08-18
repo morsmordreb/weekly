@@ -10,7 +10,7 @@ draft: false
 {{% /admonition %}}
 
 {{% admonition type="sourcecode" title="Purpose of this document" %}}
-本文档系个人研究 Blink 渲染管线的笔记记录，本文将介绍 Blink 的一些基础知识与渲染管线的主要流程。
+本文档系个人研究 Chromium 渲染管线的笔记记录，本文介绍 Chromium 的一些基础知识与渲染管线的主要流程。
 {{% /admonition %}}
 
 ## Introduce to Blink
