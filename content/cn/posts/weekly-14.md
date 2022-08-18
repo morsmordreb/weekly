@@ -1,7 +1,7 @@
 ---
-title: "WJ.14: Blink Rendering Pipeline - Introduce"
+title: "WJ.14: Chromium Rendering Pipeline - Introduce"
 date: 2022-08-14T13:37:47+08:00
-categories: ['技术']
+categories: ['chromium']
 draft: false
 ---
 
@@ -101,19 +101,32 @@ Blink 渲染管线如下图所示:
 "impl" = compositor thread. 
 {{% /aside %}}
 
-{{<figure src="https://airing.ursb.me/image%2Fblog%2Fimage_1660182336555_0.png?max_age=25920000" attr="Blink Render Pipeline" >}}
+{{<figure src="https://airing.ursb.me/image%2Fblog%2Fimage_1660182336555_0.png?max_age=25920000" attr="Chromium Rendering Pipeline (by Life of a pixel)" >}}
 
-经历以下几个关键阶段:
+这张图来自于 [Life of a pixel](https://docs.google.com/presentation/d/1boPxbgNrTU0ddsc144rcXayGA_WF53k96imRH8Mp34Y/edit#slide=id.ga884fe665f_64_45)，虽然描述了管线的关键流程，但不是很完整。此外也不是很准确，比如 Raster 阶段是运行在专门的 Raster thread 而不是 Compositor thread 中。
+
+因此，结合 cc 与 viz 的工作流，重新绘制了下图：
+
+{{<figure src="/images/chromium-rendering-pipeline/full-rendering-pipeline.png" attr="Chromium Rendering Pipeline" >}}
+
+完整的渲染管线经历以下几个阶段:
 
 1. Parsing
 2. Style
-3. Layout & Composting
-4. Paint
-5. Raster
+3. Layout
+4. Composting
+5. Paint
+6. Commit
+7. Tiling
+8. Raster
+9. Activate
+10. Submit
+11. Draw
+12. Display
 
-Blink 运行在渲染进程中，其中渲染管线的前四个阶段是在 main thread 进行的，Raster 阶段则是在 compositor thread中进行的。
+渲染管线的前半程是在 Renderer process 中进行的，其中渲染管线的 1-5 阶段运行在 Main thread 中，这也是 Blink 负责的内容；而 6-10 阶段，除了 Raster 是运行在专门的 Raster thread 中，其它流程均是在 Compositor thread 中进行的，这也是 cc 的主要内容，其中 cc 的数据源由 Paint 产生。渲染管线的尾程则是在 GPU process 中进行的，跨进程的环节交给了 viz 负责。
 
-在后续的文章，我们将逐个解析渲染管线的各个流程中 Blink 是如何工作的。
+在后续的文章，我们将逐个解析渲染管线的各个流程中 Chromium 是如何工作的。
 
 ## Resources
 
