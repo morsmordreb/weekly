@@ -106,7 +106,9 @@ Conversion: bytes → characters
 
 `HTMLDocumentParser::AppendBytes` 会检查入参数据和当前是否为主线程，之后调用 `DecodedDataDocumentParser::AppendBytes`。
 
-{{% admonition type="sourcecode" title="Source Code" %}} `HTMLDocumentParser::AppendBytes`
+{{% admonition type="sourcecode" title="Source Code" %}} 
+HTMLDocumentParser::AppendBytes
+
 ```cpp
 void HTMLDocumentParser::AppendBytes(const char* data, size_t length) {
   TRACE_EVENT2("blink", "HTMLDocumentParser::appendBytes", "size",
@@ -124,7 +126,9 @@ void HTMLDocumentParser::AppendBytes(const char* data, size_t length) {
 
 DecodedDataDocumentParser 类的成员变量 `decoder_` 指向一个 TextResourceDecoder 对象，这个TextResourceDecoder 对象负责对下载回来的网页数据进行解码(`TextResourceDecoder::Decode`)，解码后得到网页数据的字符串表示，这个字符串将会交给由另外一个成员函数 UpdateDocument 进行处理。
 
-{{% admonition type="sourcecode" title="Source Code" %}} `DecodedDataDocumentParser::AppendBytes`
+{{% admonition type="sourcecode" title="Source Code" %}} 
+DecodedDataDocumentParser::AppendBytes
+
 ```cpp
 void DecodedDataDocumentParser::AppendBytes(const char* data, size_t length) {
   // ...
@@ -134,7 +138,10 @@ void DecodedDataDocumentParser::AppendBytes(const char* data, size_t length) {
 ```
 {{% /admonition %}}
 
-{{% admonition type="sourcecode" title="Source Code" %}} `DecodedDataDocumentParser::UpdateDocument`
+{{% admonition type="sourcecode" title="Source Code" %}} 
+
+DecodedDataDocumentParser::UpdateDocument
+
 ```cpp
 void DecodedDataDocumentParser::UpdateDocument(String& decoded_data) {
   // A Document created from XSLT may have changed the encoding of the data
@@ -166,7 +173,7 @@ HTMLInputStream input_
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
 
-`HTMLDocumentParser::Append`
+HTMLDocumentParser::Append
 
 ```cpp
 void HTMLDocumentParser::Append(const String& input_source) {
@@ -263,7 +270,8 @@ void HTMLDocumentParser::FinishAppend() {
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
 
-`HTMLDocumentParser::PumpTokenizerIfPossible`
+HTMLDocumentParser::PumpTokenizerIfPossible
+
 ```cpp
 void HTMLDocumentParser::PumpTokenizerIfPossible() {
   TRACE_EVENT1("blink", "HTMLDocumentParser::PumpTokenizerIfPossible", "parser",
@@ -317,8 +325,9 @@ task_runner_state 用于追踪 HTML Parser 内部的状态，可以自行阅读 
 `HTMLDocumentParser::PumpTokenizerIfPossible` 中还存在异步解析的逻辑，逻辑分支较多，但不管怎样都会调用到 `HTMLDocumentParser::PumpTokenizer` 进行具体的 Tokenizing。
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
-`HTMLDocumentParser::PumpTokenizer`
-```cpp
+HTMLDocumentParser::PumpTokenizer
+`
+``cpp
 bool HTMLDocumentParser::PumpTokenizer() {
   
   // ...
@@ -389,7 +398,8 @@ Tokenization 的实现依照 W3C 规范 13.2.5，可阅读了解： [https://htm
 `NextToken` 是 HTMLTokenizer 的对象 `tokenizer_` 的成员函数，`HTMLTokenizer::NextToken` 逻辑很简单且冗长(1600行)，根据当前字符判断下个字符是否可能属于某个 token，源码在 third_party/blink/renderer/core/html/parser/html_tokenizer.cc 文件下，可自行阅读。
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
-`HTMLTokenizer::NextToken`
+HTMLTokenizer::NextToken
+
 ```cpp
 bool HTMLTokenizer::NextToken(SegmentedString& source, HTMLToken& token) {
     // ...
@@ -429,7 +439,9 @@ Lexing: token → Element
 在 `HTMLDocumentParser::PumpTokenizer` 的最后调用了 `ConstructTreeFromHTMLToken` 来构建 DOM Tree，我们接着看 `HTMLDocumentParser::ConstructTreeFromHTMLToken`，源码如下:
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
-`HTMLDocumentParser::ConstructTreeFromHTMLToken`
+
+HTMLDocumentParser::ConstructTreeFromHTMLToken
+
 ```cpp
 void HTMLDocumentParser::ConstructTreeFromHTMLToken() {
   DCHECK(!GetDocument()->IsPrefetchOnly());
@@ -456,7 +468,8 @@ void HTMLDocumentParser::ConstructTreeFromHTMLToken() {
 如果解析完 `<head>` 部分需要修改 `task_runner_state_` 的状态，之后调用 `HTMLTreeBuilder::ConstructTree` 并传入解析到的 token。这个过程中依然会调用 `CheckIfBlockingStylesheetAdded` 检查是否有样式表插入。
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
-`HTMLTreeBuilder::ConstructTree`
+HTMLTreeBuilder::ConstructTree
+
 ```cpp
 void HTMLTreeBuilder::ConstructTree(AtomicHTMLToken* token) {
   RUNTIME_CALL_TIMER_SCOPE(V8PerIsolateData::MainThreadIsolate(),
@@ -506,7 +519,8 @@ HTML 具有很强的健壮性，Lexing 阶段的这个环节遇到异常时会�
 接着我们来看 Lexing 的核心函数 `HTMLTreeBuilder::ProcessToken` 的实现。
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
-`HTMLTreeBuilder::ProcessToken`
+HTMLTreeBuilder::ProcessToken
+
 ```cpp
 void HTMLTreeBuilder::ProcessToken(AtomicHTMLToken* token) {
   if (token->GetType() == HTMLToken::kCharacter) {
@@ -549,7 +563,8 @@ void HTMLTreeBuilder::ProcessToken(AtomicHTMLToken* token) {
 如果 Token 的类型是 `HTMLToken::Character`，就表示该 Token 代表的是一个普通文本，这些内容不会马上进行处理，而是先调用 `ProcessCharacter` 将其保存在内部的一个 `PendingText` 缓冲区中。
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
-`HTMLTreeBuilder::ProcessCharacter`
+HTMLTreeBuilder::ProcessCharacter
+
 ```cpp
 void HTMLTreeBuilder::ProcessCharacter(AtomicHTMLToken* token) {
   // ...
@@ -592,7 +607,7 @@ Insertion Mode 是解析 HTML 时的根据所处理的不同内容设置的状�
 {{% /aside %}}
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
-`HTMLTreeBuilder::ProcessStartTag`
+HTMLTreeBuilder::ProcessStartTag
 
 ```cpp
 void HTMLTreeBuilder::ProcessStartTag(AtomicHTMLToken* token) {
@@ -618,7 +633,8 @@ void HTMLTreeBuilder::ProcessStartTag(AtomicHTMLToken* token) {
 `HTMLTreeBuilder::ProcessStartTagForInBody` 的源码又是几百行，会判断当前在 `<body>` 内各种的 tag 可能的情况，我们继续择取一个分支看看，假设要处理的是 `<body>` 下的 `<div>`。
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
-`HTMLTreeBuilder::ProcessStartTagForInBody`
+HTMLTreeBuilder::ProcessStartTagForInBody
+
 ```cpp
 void HTMLTreeBuilder::ProcessStartTagForInBody(AtomicHTMLToken* token) {
   // ...
@@ -669,15 +685,15 @@ HTMLElementStack 规范可见: [http://www.whatwg.org/specs/web-apps/current-wor
 
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
-`HTMLConstructionSite::InsertHTMLElement`
+HTMLConstructionSite::InsertHTMLElement
+
 ```cpp
 void HTMLConstructionSite::InsertHTMLElement(AtomicHTMLToken* token) {
   Element* element = CreateElement(token, html_names::xhtmlNamespaceURI);
   AttachLater(CurrentNode(), element);
   open_elements_.Push(HTMLStackItem::Create(element, token));
 }
-`HTMLConstructionSite::InsertHTMLElement`
-```cpp
+
 void HTMLConstructionSite::CreateElement(AtomicHTMLToken* token) {
   Element* element = CreateElement(token, html_names::xhtmlNamespaceURI);
   AttachLater(CurrentNode(), element);
@@ -873,7 +889,7 @@ Element* HTMLConstructionSite::CreateElement(
 {{% /aside %}}
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
-`HTMLTreeBuilder::ProcessEndTagForInBody`
+HTMLTreeBuilder::ProcessEndTagForInBody
 
 ```cpp
 void HTMLTreeBuilder::ProcessEndTagForInBody(AtomicHTMLToken* token) {
