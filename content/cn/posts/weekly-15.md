@@ -122,6 +122,7 @@ void HTMLDocumentParser::AppendBytes(const char* data, size_t length) {
   DecodedDataDocumentParser::AppendBytes(data, length);
 }
 ```
+
 {{% /admonition %}}
 
 DecodedDataDocumentParser 类的成员变量 `decoder_` 指向一个 TextResourceDecoder 对象，这个TextResourceDecoder 对象负责对下载回来的网页数据进行解码(`TextResourceDecoder::Decode`)，解码后得到网页数据的字符串表示，这个字符串将会交给由另外一个成员函数 UpdateDocument 进行处理。
@@ -699,7 +700,7 @@ void HTMLConstructionSite::CreateElement(AtomicHTMLToken* token) {
 }
 ```
 
-`HTMLConstructionSite::CreateElement`
+HTMLConstructionSite::CreateElement
 ```cpp
 // "create an element for a token"
 Element* HTMLConstructionSite::CreateElement(
