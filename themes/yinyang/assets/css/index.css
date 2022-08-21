@@ -4,7 +4,6 @@ body {
   font-family: "Bree Serif", "LXGW WenKai GB", sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0 20px;
-  word-break: break-all;
 }
 
 article {
@@ -255,6 +254,10 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    word-break: break-all;
+  }
+
   .header-title,
   .header-subtitle,
   .header-items {

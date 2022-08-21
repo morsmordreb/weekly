@@ -104,7 +104,7 @@ Conversion: bytes → characters
 #3	0x00000002d2382778 in blink::HTMLDocumentParser::AppendBytes(char const*, unsigned long) at /Users/airing/Files/code/chromium/src/third_party/blink/renderer/core/html/parser/html_document_parser.cc:1351
 ```
 
-`HTMLDocumentParser::AppendBytes` 会检查入参数据和当前是否为主线程，之后调用 `DecodedDataDocumentParser::AppendBytes`。
+`HTMLDocumentParser::AppendBytes` 会检查入参数据和当前是否为主线程，之后调用 `DecodedDataDocumentParser` 下的成员函数 `AppendBytes`。
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
 HTMLDocumentParser::AppendBytes
@@ -137,6 +137,7 @@ void DecodedDataDocumentParser::AppendBytes(const char* data, size_t length) {
   UpdateDocument(decoded);
 }
 ```
+
 {{% /admonition %}}
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
@@ -155,6 +156,7 @@ void DecodedDataDocumentParser::UpdateDocument(String& decoded_data) {
     Append(decoded_data);
 }
 ```
+
 {{% /admonition %}}
 
 
@@ -252,6 +254,7 @@ void HTMLDocumentParser::FinishAppend() {
   PumpTokenizerIfPossible();
 }
 ```
+
 {{% /admonition %}}
 
 根据 `HTMLDocumentParser::Append` 的实现，我们可以发现在这个过程中会处理一些 Preload 的资源进行预请求。网站通常会使用外链资源，比如 img、css 和 JavaScript 资源，这些文件需要从网络或缓存加载。Main thread 在解析构建 DOM 时逐个请求它们，为了加快网站的加载速度，preload scanner 是并发执行的。即如果在 `Append` 过程中发现有 `<img>` 或 `<link>` 之类的内容，preload scanner(`HTMLParserScriptRunner`)会直接获取 HTML parser 解析出来的资源地址，并将请求发送到 browser process 中的 network thread 以获取远程的网络资源。
@@ -306,6 +309,7 @@ void HTMLDocumentParser::PumpTokenizerIfPossible() {
   }
 }
 ```
+
 {{% /admonition %}} 
 
 {{% aside %}}
@@ -322,7 +326,7 @@ task_runner_state 用于追踪 HTML Parser 内部的状态，可以自行阅读 
 需要后续补充 HTMLDocumentParser::SchedulePumpTokenizer 异步解析的相关内容。
 {{% /admonition %}}
 
-`HTMLDocumentParser::PumpTokenizerIfPossible` 中还存在异步解析的逻辑，逻辑分支较多，但不管怎样都会调用到 `HTMLDocumentParser::PumpTokenizer` 进行具体的 Tokenizing。
+`PumpTokenizerIfPossible` 中还存在异步解析的逻辑，逻辑分支较多，但不管怎样都会调用到 `HTMLDocumentParser::PumpTokenizer` 进行具体的 Tokenizing。
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
 HTMLDocumentParser::PumpTokenizer
@@ -365,6 +369,7 @@ bool HTMLDocumentParser::PumpTokenizer() {
   // ...
 }
 ```
+
 {{% /admonition %}} 
 
 这段代码首先 `CanTakeNextToken` 判断是否能继续获取 token，如果是就调用 `NextToken` 获取下一个 token，之后调用 `ConstructTreeFromHTMLToken`。
@@ -426,6 +431,7 @@ bool HTMLTokenizer::NextToken(SegmentedString& source, HTMLToken& token) {
     // ...
 }
 ```
+
 {{% /admonition %}} 
 
 至此 Tokenizing 逻辑结束，我们获取到了一个个独立的 token。
@@ -463,6 +469,7 @@ void HTMLDocumentParser::ConstructTreeFromHTMLToken() {
   CheckIfBlockingStylesheetAdded();
 }
 ```
+
 {{% /admonition %}} 
 
 如果解析完 `<head>` 部分需要修改 `task_runner_state_` 的状态，之后调用 `HTMLTreeBuilder::ConstructTree` 并传入解析到的 token。这个过程中依然会调用 `CheckIfBlockingStylesheetAdded` 检查是否有样式表插入。
@@ -499,6 +506,7 @@ void HTMLTreeBuilder::ConstructTree(AtomicHTMLToken* token) {
   // We might be detached now.
 }
 ```
+
 {{% /admonition %}}
 
 {{% aside %}}
@@ -557,6 +565,7 @@ void HTMLTreeBuilder::ProcessToken(AtomicHTMLToken* token) {
   }
 }
 ```
+
 {{% /admonition %}}
 
 
@@ -572,6 +581,7 @@ void HTMLTreeBuilder::ProcessCharacter(AtomicHTMLToken* token) {
   ProcessCharacterBuffer(buffer);
 }
 ```
+
 {{% /admonition %}}
 
 等到遇到下一个要处理的 Token 的类型不是 `HTMLToken::Character` 时，才会调用 `HTMLConstructionSite::Flush` 对缓冲区里的 characters 进行处理，它会把这些文本挂载到最近的 DOM 节点下。
@@ -622,6 +632,7 @@ void HTMLTreeBuilder::ProcessStartTag(AtomicHTMLToken* token) {
   // ...
 }
 ```
+
 {{% /admonition %}}
 
 当处理到 `<body>` 里面的内容时，Insertion Mode 就设置为 `kInBodyMode`，命中状态之后进一步执行 `ProcessStartTagForInBody` 对 tag 做处理。
@@ -630,7 +641,7 @@ void HTMLTreeBuilder::ProcessStartTag(AtomicHTMLToken* token) {
 这个示例对应的规范可见: [https://html.spec.whatwg.org/multipage/parsing.html](https://html.spec.whatwg.org/multipage/parsing.html#:~:text=An%20start%20tag%20whose%20tag%20name%20is%20one%20of%3A%20%22address%22%2C)
 {{% /aside %}}
 
-`HTMLTreeBuilder::ProcessStartTagForInBody` 的源码又是几百行，会判断当前在 `<body>` 内各种的 tag 可能的情况，我们继续择取一个分支看看，假设要处理的是 `<body>` 下的 `<div>`。
+`ProcessStartTagForInBody` 的源码又是几百行，会判断当前在 `<body>` 内各种的 tag 可能的情况，我们继续择取一个分支看看，假设要处理的是 `<body>` 下的 `<div>`。
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
 HTMLTreeBuilder::ProcessStartTagForInBody
@@ -675,13 +686,14 @@ void HTMLTreeBuilder::ProcessStartTagForInBody(AtomicHTMLToken* token) {
   // ...
 }
 ```
+
 {{% /admonition %}}
 
 {{% aside %}}
 HTMLElementStack 规范可见: [http://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#the-stack-of-open-elements](http://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#the-stack-of-open-elements) <br/> <br/> 根据 token 创建 element 的规范可见: [https://html.spec.whatwg.org/C/#create-an-element-for-the-token](https://html.spec.whatwg.org/C/#create-an-element-for-the-token)
 {{% /aside %}}
 
-核心是传入 `<div>` token 调用 `HTMLConstructionSite::InsertHTMLElement`，在该函数内调用 `CreateElement` 根据 token 创建一个 HTMLElement，之后将其压入 `HTMLElementStack` 栈中：
+核心是传入 `<div>` token 调用 `InsertHTMLElement`，在该函数内调用 `CreateElement` 根据 token 创建一个 HTMLElement，之后将其压入 `HTMLElementStack` 栈中：
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
 HTMLConstructionSite::InsertHTMLElement
@@ -932,6 +944,7 @@ void HTMLTreeBuilder::ProcessEndTagForInBody(AtomicHTMLToken* token) {
   // ...
 }
 ```
+
 {{% /admonition %}}
 
 至此 Lexing 环节结束，后续流程会基于该环节存储 Element 使用到的数据结构来进行 DOM Tree 的构建。
@@ -1064,6 +1077,7 @@ mojo::ScopedMessagePipeHandle client;
 mojo::ScopedMessagePipeHandle server;
 mojo::CreateMessagePipe(nullptr, &client, &server);
 ```
+
 {{% /admonition %}}
 
 {{% admonition type="tryit" title="Create a new data pipe" %}}
@@ -1099,6 +1113,7 @@ mojo::ScopedSharedBufferHandle another_handle = buffer->Clone();
 mojo::ScopedSharedBufferHandle read_only_handle =
     buffer->Clone(mojo::SharedBufferHandle::AccessMode::READ_ONLY);
 ```
+
 {{% /admonition %}}
 
 ## Resources
