@@ -254,7 +254,7 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
-  body {
+  p {
     word-break: break-all;
   }
 
