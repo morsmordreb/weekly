@@ -6,11 +6,17 @@ draft: false
 ---
 
 {{% admonition type="warning" title="Warning" %}}
-本文章属于渐进性笔记，如果您看到本提示，说明该文章目前仍未完成，会不定期迭代更新，该系列文章完成时会合稿发布博客。如果您有任何疑问或反馈，请联系 [@airing](https://me.ursb.me/about.html)。**Last update: August 14 2022**
+如果您看到本提示，说明该文章目前仍未完成，会不定期迭代更新，该系列文章完成时会合稿发布博客。如果您有任何疑问或反馈，请联系 [@airing](https://ursb.me)。**Last update: August 20 2022**
 {{% /admonition %}}
 
 {{% admonition type="sourcecode" title="Purpose of this document" %}}
 本文档系个人研究 Chromium 渲染管线的笔记记录，本文介绍 Chromium 的一些基础知识与渲染管线的主要流程。
+
+本文分析的源码基于当前最新版本 `107`，每个版本类名/函数名和对应的具体实现或许有所差异，但主逻辑目前来看不会有所变动。
+
+推荐阅读本系列后续文章：
+
+- [Chromium Rendering Pipeline - Parsing](/posts/weekly-15)
 {{% /admonition %}}
 
 ## Introduce to Blink
