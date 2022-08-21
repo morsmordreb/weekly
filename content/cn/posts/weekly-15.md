@@ -169,7 +169,7 @@ Tokenizing: characters → token
 HTMLInputStream input_
 {{% /aside %}}
 
-接上节所述，调用栈到了 `HTMLDocumentParser::Append`，该方法首先将 characters 附加在成员变量 `input_` 描述的一个输入流中，接下来再调用 `HTMLDocumentParser::PumpTokenizerIfPossible` 对该输入流 `input_` 中的 characters 进行解析。
+接上节所述，调用栈到了 `HTMLDocumentParser::Append`，该方法首先将 characters 附加在成员变量 `input_` 描述的一个输入流中，接下来再调用 `PumpTokenizerIfPossible` 对该输入流 `input_` 中的 characters 进行解析。
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
 
@@ -257,7 +257,7 @@ void HTMLDocumentParser::FinishAppend() {
 
 {{<figure src="/images/chromium-rendering-pipeline/parsing-html.png" attr="The main thread parsing HTML and building a DOM tree" >}}
 
-在 `Append` 函数的最后会调用成员函数 `PumpTokenizerIfPossible`，尝试进行 Tokenizing。我们走进 `HTMLDocumentParser::PumpTokenizerIfPossible`，先单步断点看看调用栈的情况:
+在 `Append` 函数的最后会调用成员函数 `PumpTokenizerIfPossible`，尝试进行 Tokenizing。我们走进 `PumpTokenizerIfPossible`，先单步断点看看调用栈的情况:
 
 ```
 #0	0x00000002d23dc084 in blink::HTMLTreeBuilder::ProcessToken(blink::AtomicHTMLToken*) at /Users/airing/Files/code/chromium/src/third_party/blink/renderer/core/html/parser/html_tree_builder.cc:363
@@ -366,13 +366,13 @@ bool HTMLDocumentParser::PumpTokenizer() {
 ```
 {{% /admonition %}} 
 
-这段代码首先 `CanTakeNextToken` 判断是否能继续获取 token，如果是就调用 `NextToken` 获取下一个 token，之后调用 `HTMLDocumentParser::ConstructTreeFromHTMLToken`。
+这段代码首先 `CanTakeNextToken` 判断是否能继续获取 token，如果是就调用 `NextToken` 获取下一个 token，之后调用 `ConstructTreeFromHTMLToken`。
 
 {{% aside %}}
 CanTakeNextToken 函数内部调用 HasParserBlockingScript 判断当前是否有 JavaScript 脚本，如果有就暂停解析，并调用 RunScriptsForPausedTreeBuilder 在 main thread 优先执行 JavaScript 逻辑。
 {{% /aside %}}
 
-不过这段代码中，我们先需要注意的是 RUNTIME_CALL_TIMER_SCOPE(V8PerIsolateData::MainThreadIsolate(), RuntimeCallStats::CounterId::kHTMLTokenizerNextToken) 这段逻辑，在 parse 的过程中如果遇到 V8 中有 JavaScript 需要运行，或者解析的网页内容超过一定量时，如果当前线程花在解析网页内容的时间超过预设的阀值(`TimedParserBudgetEnabled`)，那么当前线程就会自动放弃 CPU，通过一个定时器等待一小段时间后再继续解析剩下的网页内容。
+不过这段代码中，我们先需要注意的是 RUNTIME_CALL_TIMER_SCOPE 这段逻辑，在 parse 的过程中如果遇到 V8 中有 JavaScript 需要运行，或者解析的网页内容超过一定量时，如果当前线程花在解析网页内容的时间超过预设的阀值(`TimedParserBudgetEnabled`)，那么当前线程就会自动放弃 CPU，通过一个定时器等待一小段时间后再继续解析剩下的网页内容。
 
 {{% admonition type="tryit" title="Note" %}}
 JavaScript can block the parsing
@@ -435,11 +435,11 @@ Lexing: token → Element
 
 ## Lexing
 
-在 `HTMLDocumentParser::PumpTokenizer` 的最后调用了 `ConstructTreeFromHTMLToken` 来构建 DOM Tree，我们接着看 `HTMLDocumentParser::ConstructTreeFromHTMLToken`，源码如下:
+在 `HTMLDocumentParser::PumpTokenizer` 的最后调用了 `ConstructTreeFromHTMLToken` 来构建 DOM Tree，我们接着看 `ConstructTreeFromHTMLToken`，源码如下:
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
 
-HTMLDocumentParser::ConstructTreeFromHTMLToken
+HTMLDocumentParser:: ConstructTreeFromHTMLToken
 
 ```cpp
 void HTMLDocumentParser::ConstructTreeFromHTMLToken() {
