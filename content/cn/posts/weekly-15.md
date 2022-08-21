@@ -1,6 +1,6 @@
 ---
 title: "WJ.15: Chromium Rendering Pipeline - Parsing"
-date: 2022-08-20T00:00:47+08:00
+date: 2022-08-21T00:00:47+08:00
 categories: ['chromium']
 draft: false
 ---
