@@ -1,8 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Airing Weekly</title><link>https://weekly.ursb.me/posts/</link><description>Recent content in Posts on Airing Weekly</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>本文由 Airing 创作，采用 知识共享署名4.0 国际许可协议进行许可</copyright><lastBuildDate>Sun, 14 Aug 2022 13:37:47 +0800</lastBuildDate><atom:link href="https://weekly.ursb.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>WJ.14: Chromium Rendering Pipeline - Introduce</title><link>https://weekly.ursb.me/posts/weekly-14/</link><pubDate>Sun, 14 Aug 2022 13:37:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-14/</guid><description>Warning
-本文章属于渐进性笔记，如果您看到本提示，说明该文章目前仍未完成，会不定期迭代更新，该系列文章完成时会合稿发布博客。如果您有任何疑问或反馈，请联系 @airing。Last update: August 14 2022
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Airing Weekly</title><link>https://weekly.ursb.me/posts/</link><description>Recent content in Posts on Airing Weekly</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>本文由 Airing 创作，采用 知识共享署名4.0 国际许可协议进行许可</copyright><lastBuildDate>Sat, 20 Aug 2022 00:00:47 +0800</lastBuildDate><atom:link href="https://weekly.ursb.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>WJ.15: Chromium Rendering Pipeline - Parsing</title><link>https://weekly.ursb.me/posts/weekly-15/</link><pubDate>Sat, 20 Aug 2022 00:00:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-15/</guid><description>Warning
+如果您看到本提示，说明该文章目前仍未完成，会不定期迭代更新，该系列文章完成时会合稿发布博客。如果您有任何疑问或反馈，请联系 @airing。Last update: August 21 2022
+Purpose of this document
+本文档系个人研究 Chromium 渲染管线的笔记记录，本文介绍 Chromium 渲染管线的 Parsing 阶段。
+本文分析的源码基于当前最新版本 107，每个版本类名/函数名和对应的具体实现或许有所差异，但主逻辑目前来看不会有所变动。
+如果你没有看过前文，推荐阅读：
+Chromium Rendering Pipeline - Introduce Overview Parsing 的目的是将 HTML 文档解析为 HTML 标准中的 DOM 树结构和 CSSOM 树结构。
+这个环节的核心逻辑是 Render process 接收到网络字节或来自 Service Worker 缓存之后，Parsing HTML 并构建 DOM Tree 和 CSSOM Tree。对于 DOM Tree 的解析，模型如下图所示：
+Figure: The main thread parsing HTML and building a DOM tree Parsing 涉及到的数据流为 bytes → characters → token → nodes → object model，对应到 DOM(document object model) Tree 的构建，如下转换过程所示：</description></item><item><title>WJ.14: Chromium Rendering Pipeline - Introduce</title><link>https://weekly.ursb.me/posts/weekly-14/</link><pubDate>Sun, 14 Aug 2022 13:37:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-14/</guid><description>Warning
+如果您看到本提示，说明该文章目前仍未完成，会不定期迭代更新，该系列文章完成时会合稿发布博客。如果您有任何疑问或反馈，请联系 @airing。Last update: August 20 2022
 Purpose of this document
 本文档系个人研究 Chromium 渲染管线的笔记记录，本文介绍 Chromium 的一些基础知识与渲染管线的主要流程。
-Introduce to Blink Blink 是 Web 的渲染引擎，Chromium 和 Android Webview 都是用 Blink 作为渲染引擎。
+本文分析的源码基于当前最新版本 107，每个版本类名/函数名和对应的具体实现或许有所差异，但主逻辑目前来看不会有所变动。
+推荐阅读本系列后续文章：
+Chromium Rendering Pipeline - Parsing Introduce to Blink Blink 是 Web 的渲染引擎，Chromium 和 Android Webview 都是用 Blink 作为渲染引擎。
 Blink Public API Figure: Blink in Web platform 你可以阅读 How Blink works 获取更多关于 Blink 的知识。 Blink 包括以下特性：
 实现了 Web 平台的规范（也就是 HTML 标准），包括 DOM，CSS 和 WebIDL； 内嵌 V8 运行 JavaScript； 通过底层的网络栈请求资源； 构建 DOM 树； 计算样式和排版； 内嵌 Chrome Compositor 用于绘图； Source to read</description></item><item><title>WJ.13: 玄学杠杆与异世界小组</title><link>https://weekly.ursb.me/posts/weekly-13/</link><pubDate>Sun, 31 Jul 2022 11:57:47 +0800</pubDate><guid>https://weekly.ursb.me/posts/weekly-13/</guid><description>玄学杠杆与异世界小组 周末听到一期播客，说的是年轻人的网络占卜：EP03 网络占卜「奇观」：00 后给 70 后指点人生 - 跳进兔子洞。
 网络占卜变成了年轻人的职业选择，大多数人会说一切的开始来源于一颗纯粹的好奇心。低门槛、零成本、高回报。大部分占卜师的第一步都是自学，基本上去 B 站或者几本书看个两三天就会了。小红书上接单的普遍是自学了几个月的 00 后，想要从零基础把塔罗发展成副业甚至是全职并不难，而且比较有前景。现在的年轻人社恐的略多，可能这种足不出户、不用面对面的要求会比较符合目前的市场环境。
