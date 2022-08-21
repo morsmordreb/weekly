@@ -253,7 +253,6 @@ void HTMLDocumentParser::FinishAppend() {
 ```
 {{% /admonition %}}
 
-
 根据 `HTMLDocumentParser::Append` 的实现，我们可以发现在这个过程中会处理一些 Preload 的资源进行预请求。网站通常会使用外链资源，比如 img、css 和 JavaScript 资源，这些文件需要从网络或缓存加载。Main thread 在解析构建 DOM 时逐个请求它们，为了加快网站的加载速度，preload scanner 是并发执行的。即如果在 `Append` 过程中发现有 `<img>` 或 `<link>` 之类的内容，preload scanner(`HTMLParserScriptRunner`)会直接获取 HTML parser 解析出来的资源地址，并将请求发送到 browser process 中的 network thread 以获取远程的网络资源。
 
 {{<figure src="/images/chromium-rendering-pipeline/parsing-html.png" attr="The main thread parsing HTML and building a DOM tree" >}}
@@ -315,19 +314,19 @@ void HTMLDocumentParser::PumpTokenizerIfPossible() {
 函数体内的 `CheckIfBlockingStylesheetAdded` 调用会检查当前是否有 Stylesheet 追加，如果有的话就会阻止继续 parsing。
 
 {{% aside %}}
-task_runner_state 用于追踪 HTML Parser 内部的状态，可以自行阅读 `HTMLDocumentParserState` 类的实现了解，这里不赘述。
+task_runner_state 用于追踪 HTML Parser 内部的状态，可以自行阅读 HTMLDocumentParserState 类的实现了解，这里不赘述。
 {{% /aside %}}
 
 {{% admonition type="warning" title="Warning" %}}
-需要后续补充 `HTMLDocumentParser::SchedulePumpTokenizer` 异步解析的相关内容。
+需要后续补充 HTMLDocumentParser::SchedulePumpTokenizer 异步解析的相关内容。
 {{% /admonition %}}
 
 `HTMLDocumentParser::PumpTokenizerIfPossible` 中还存在异步解析的逻辑，逻辑分支较多，但不管怎样都会调用到 `HTMLDocumentParser::PumpTokenizer` 进行具体的 Tokenizing。
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
 HTMLDocumentParser::PumpTokenizer
-`
-``cpp
+
+```cpp
 bool HTMLDocumentParser::PumpTokenizer() {
   
   // ...
@@ -682,7 +681,6 @@ HTMLElementStack 规范可见: [http://www.whatwg.org/specs/web-apps/current-wor
 {{% /aside %}}
 
 核心是传入 `<div>` token 调用 `HTMLConstructionSite::InsertHTMLElement`，在该函数内调用 `CreateElement` 根据 token 创建一个 HTMLElement，之后将其压入 `HTMLElementStack` 栈中：
-
 
 {{% admonition type="sourcecode" title="Source Code" %}} 
 HTMLConstructionSite::InsertHTMLElement
