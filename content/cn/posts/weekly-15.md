@@ -1128,6 +1128,9 @@ TODO:
 1. 补充 custom element 与 shadow tree
 2. 补充 flat tree traversal
 3. 补充 CSSOM Tree 的构建流程
+4. 补充 createElement 规范详解
+5. 补充 JS 如何查 DOM
+6. 补充 DOM Tree 的兄弟关系与父子关系是如何建立的
 
 {{% /admonition %}}
 
