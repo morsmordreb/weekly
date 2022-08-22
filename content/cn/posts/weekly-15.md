@@ -513,7 +513,7 @@ void HTMLTreeBuilder::ConstructTree(AtomicHTMLToken* token) {
 Foreign Content: 即不是 HTML 标签相关的内容，如 MathML 和 SVG 这种外部标签相关的内容。对应 W3C 规范可查询 [http://www.whatwg.org/specs/web-apps/current-work/multipage/tree-construction.html#tree-construction](http://www.whatwg.org/specs/web-apps/current-work/multipage/tree-construction.html#tree-construction)
 {{% /aside %}}
 
-`HTMLTreeBuilder::ConstructTree` 首先调用 `ShouldProcessTokenInForeignContent` 判断参数 `token` 描述的 Token 是否为Foreign Content，如果是，就调用 `ProcessTokenInForeignContent` 对它进行处理，函数内部会判断这些 token 属于什么类型，如注释、开标签、闭标签、内容等，解析完之后生成 Node 并将其推入到 HTMLElementStack 中。在后文另一个分支 `ProcessToken` 的调用里会介绍 Node 的生成与压栈逻辑，此处不赘述，这部分源码可见：third_party/blink/renderer/core/html/parser/html_tree_builder.cc。
+`HTMLTreeBuilder::ConstructTree` 首先调用 `ShouldProcessTokenInForeignContent` 判断参数 `token` 描述的 Token 是否为 Foreign Content，如果是则调用 `ProcessTokenInForeignContent` 对它进行处理，函数内部会判断这些 token 属于什么类型，如注释、开标签、闭标签、内容等，解析完之后生成 Node 并将其推入到 HTMLElementStack 中。在后文另一个分支 `ProcessToken` 的调用里会介绍 Node 的生成与压栈逻辑，此处不赘述，这部分源码可见：third_party/blink/renderer/core/html/parser/html_tree_builder.cc。
 
 而如果 `token` 描述的是一个 HTML 标签相关的内容，那么调用 `HTMLTreeBuilder::ProcessToken` 对它进行处理，后文着重介绍 `ProcessToken`。
 
