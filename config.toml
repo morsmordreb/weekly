@@ -38,7 +38,7 @@ copyright = '本文由 Airing 创作，采用 知识共享署名4.0 国际许可
 mainSections = ["posts"]
 headTitle = "Airing Weekly"
 # disqus = "joway" # disqus account name
-# extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-xxx"></script>'
+extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-RLCV35V6XX"></script>'
 Description = 'Log something weekly, want you can be happy.'
 favicon = 'https://airing.ursb.me/image/favicon.ico'
 postHeaderContent = ""
